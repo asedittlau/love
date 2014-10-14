@@ -1,0 +1,89 @@
+@-webkit-keyframes rotate_and_scale {
+    0% {
+        -webkit-transform: rotate(0deg) scale(1,1);
+    }
+    50% { 
+        -webkit-transform: rotate(360deg) scale(0.1,0.1);
+    }
+    100% {
+        -webkit-transform: rotate(0deg) scale(1,1);
+    }
+}
+
+.hidden {
+	display: none;
+}
+
+.star {
+    -webkit-animation-name: rotate_and_scale; 
+    -webkit-animation-duration: 5s; 
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-transform-origin: 50% 50%; /* Chrome, Safari, Opera */
+}
+
+.topLeft {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.topRight {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.bottomRight {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.bottomLeft {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.startButton {
+	background-color: #31e8b2;
+	width: 200px;
+	height: 50px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -100px;
+	margin-top: -25px;
+}
+
+.duck-icon {
+	-webkit-transition:all 5s linear;
+	background-image: url("images/duck.svg");
+	background-size: contain;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	bottom: 47%;
+	left: 0;
+}
+
+.duck-icon.swim {
+	left: 100%;
+}
+
+.water {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 5%;
+	background-color: blue;
+	opacity: 0.5;
+	
+}
+
+.water.expand {
+	height: 50%;
+	transition: height 0.25s;
+}
